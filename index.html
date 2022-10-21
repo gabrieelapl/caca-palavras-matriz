@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caça-palavras</title>
+</head>
+<body>
+    <center>
+        <h1>Caça-palavras</h1>
+        <h2> Netflix, Windows, MacOS, Ios, Safari, Linux, Gimp, Word, Spotify, Calculadora</h2>
+
+        <table border="1" width="500px" height="500px">
+            <script>
+                matriz = new Array;
+                matriz = [["N","E","T","F","L","I","X","J","A","I","O","S"],
+                ["G","K","Y","S","Y","O","N","L","I","P","T","P"],
+                ["H","I","G","W","I","N","D","O","W","S","W","M"],
+                ["G","T","S","W","Q","L","A","S","P","V","B","A"],
+                ["S","Q","Q","L","I","N","U","X","U","K","Y","C"],
+                ["H","A","Q","V","P","U","K","A","G","G","D","O"],
+                ["L","G","F","E","W","O","R","D","Q","I","N","S"],
+                ["W","I","G","A","K","S","K","J","G","M","M","Q"],
+                ["O","W","E","P","R","F","Y","Z","N","P","X","J"],
+                ["T","S","P","O","T","I","F","Y","P","I","Z","K"],
+                ["U","Q","T","N","L","A","S","B","R","Q","K","M"], 
+                ["C","A","L","C","U","L","A","D","O","R","A","O"]];
+                
+                binario = new Array;
+                binario = [["1","1","1","1","1","1","1","0","0","1","1","1"], 
+                ["0","0","0","0","0","0","0","0","0","0","0","0"], 
+                ["0","0","0","1","1","1","1","1","1","1","0","1"], 
+                ["0","0","0","0","0","0","0","0","0","0","0","1"], 
+                ["1","0","0","1","1","1","1","1","0","0","0","1"], 
+                ["0","1","0","0","0","0","0","0","0","1","0","1"], 
+                ["0","0","1","0","1","1","1","1","0","1","0","1"], 
+                ["0","0","0","1","0","0","0","0","0","1","0","0"], 
+                ["0","0","0","0","1","0","0","0","0","1","0","0"], 
+                ["0","1","1","1","1","1","1","1","0","0","0","0"],
+                ["0","0","0","0","0","0","0","0","0","0","0","0"], 
+                ["1","1","1","1","1","1","1","1","1","1","1","0"]];
+        
+                for(linha = 0; linha <= 11; linha++){
+
+                    document.write("<tr>");
+
+                    for(coluna = 0; coluna <= 11; coluna++){
+
+                        if(binario [linha][coluna]== 1){
+                            document.write("<td bgcolor='#94ec9c' class='td'>" + matriz[linha][coluna] + "</td>");
+                        }
+        
+                        else{
+                            document.write("<td bgcolor='#ffffff' class='td'>" + matriz[linha][coluna]  + "</td>");
+                        }
+                    }
+                    document.write("</tr>");
+                }
+            </script>
+    </center>
+</body>
+</html>
